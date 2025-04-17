@@ -1,4 +1,3 @@
-
 import MainLayout from '../components/layouts/MainLayout';
 import HeroSection from '../components/sections/HeroSection';
 import AboutSection from '../components/sections/AboutSection';
@@ -18,11 +17,11 @@ const Index = () => {
         <AboutSection />
       </div>
       
-      <div className="white-to-red-wavy-divider"></div>
+      <div className="blue-to-white-wavy-divider"></div>
       
       <AreasSection />
       
-      <div className="blue-to-white-wavy-divider"></div>
+      <div className="inverted-blue-wavy-divider"></div>
       
       <ProjectsSection />
       
