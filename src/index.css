@@ -1,0 +1,45 @@
+
+/* Import base styles */
+@import './styles/base.css';
+
+/* Import component styles */
+@import './styles/components.css';
+
+/* Import wave dividers */
+@import './styles/waves.css';
+
+/* Import animations */
+@import './styles/animations.css';
+
+/* Custom menu styles */
+.desktop-nav-link {
+  position: relative;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+}
+
+.desktop-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.mobile-nav-link {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0.75rem;
+  text-align: left;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-link.active {
+  background-color: rgba(234, 56, 76, 0.2);
+  color: #ea384c;
+}

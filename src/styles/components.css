@@ -1,0 +1,33 @@
+
+@layer components {
+  .material-btn {
+    @apply relative inline-flex items-center justify-center overflow-hidden rounded-md bg-leiah-orange text-white px-6 py-3 font-medium transition-all duration-300 hover:bg-opacity-90 active:translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-leiah-orange;
+  }
+
+  .material-card {
+    @apply bg-white rounded-lg shadow-material-1 transition-shadow duration-300 hover:shadow-material-2;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-16 relative animate-fade-in;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply block w-16 h-1 bg-leiah-orange mx-auto mt-4;
+  }
+
+  .accent-line {
+    position: relative;
+  }
+
+  .accent-line::after {
+    content: '';
+    @apply absolute w-16 h-1 bg-leiah-orange -bottom-2 left-1/2 -translate-x-1/2;
+  }
+
+  .ripple {
+    @apply absolute transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-white bg-opacity-25 animate-ripple;
+    pointer-events: none;
+  }
+}

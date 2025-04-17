@@ -1,0 +1,194 @@
+@layer components {
+  .animate-slide-up {
+    @apply opacity-0 translate-y-10;
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-right {
+    @apply opacity-0 -translate-x-10;
+    animation: slideRight 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-left {
+    @apply opacity-0 translate-x-10;
+    animation: slideLeft 0.6s ease-out forwards;
+  }
+  
+  .animate-scale {
+    @apply opacity-0 scale-95;
+    animation: scaleUp 0.5s ease-out forwards;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulseSlow 3s infinite;
+  }
+  
+  .animate-rotate {
+    animation: rotate 15s linear infinite;
+  }
+  
+  .animate-bounce-custom {
+    animation: bounce 1s ease-in-out infinite;
+  }
+  
+  .animate-fade-in {
+    @apply opacity-0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .hover-lift {
+    @apply transition-transform duration-300;
+  }
+  
+  .hover-lift:hover {
+    @apply -translate-y-2 shadow-lg;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300;
+  }
+  
+  .hover-scale:hover {
+    @apply scale-105;
+  }
+
+  .hover-rotate {
+    @apply transition-transform duration-300;
+  }
+
+  .hover-rotate:hover {
+    @apply rotate-3;
+  }
+
+  .click-effect {
+    @apply relative overflow-hidden;
+  }
+
+  .click-effect::after {
+    content: '';
+    @apply absolute inset-0 bg-white/20 scale-0 rounded-full;
+    transform-origin: center;
+    transition: transform 0.5s ease-out;
+  }
+
+  .click-effect:active::after {
+    @apply scale-100;
+    opacity: 0;
+    transition: 0s;
+  }
+
+  .animate-slide-up.visible,
+  .animate-slide-right.visible,
+  .animate-slide-left.visible,
+  .animate-scale.visible {
+    @apply opacity-100 translate-y-0 translate-x-0 scale-100;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseSlow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+.delay-200 {
+  animation-delay: 200ms;
+}
+.delay-300 {
+  animation-delay: 300ms;
+}
+.delay-400 {
+  animation-delay: 400ms;
+}
+.delay-500 {
+  animation-delay: 500ms;
+}
+.delay-600 {
+  animation-delay: 600ms;
+}
+.delay-700 {
+  animation-delay: 700ms;
+}
+.delay-800 {
+  animation-delay: 800ms;
+}
